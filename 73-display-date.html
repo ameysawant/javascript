@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>display date</title>
+</head>
+
+<body>
+    <script>
+
+        let date = new Date();
+
+        let myDay = date.getDay(); //0-6
+        let myDate = date.getDate(); // 1-31
+        let myMonth = date.getMonth(); //0-11
+        let myYear = date.getFullYear(); //1000-9999
+        let myHours = date.getHours();
+        let myMinutes = date.getMinutes();
+        let mySeconds = date.getSeconds();
+        let myMilliSeconds = date.getMilliseconds();
+
+        // const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        // //              2 < 7            2
+        // for (let a = 0; a < days.length; a++) {
+        //     if (a == myDay) {// 2==2
+        //         showDay = days[a]//2
+        //     }
+        // }
+
+        // const months = ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july','aug','sep','oct','nov','dec'];
+        // //              0 < 12            2
+        // for (let b = 0; b < months.length; b++) {
+        //     if (b == myMonth) {// 6==6
+        //         showMonth = months[b]//2
+        //     }
+        // }
+
+        const dayFunc = function(x){//2
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            return days[x];
+        }
+        let showDay = dayFunc(myDay);//2
+
+
+        const monthFunc = function(z){//6
+            const months = ['jan', 'feb', 'mar', 'apr', 'may', 'june', 'july','aug','sep','oct','nov','dec'];
+            return months[z];//6
+        }
+        let showMonth = monthFunc(myMonth);//6
+
+        document.write(
+            `${showDay} ${myDate} ${showMonth} ${myYear} <br> 
+            ${myHours}:${myMinutes}:${mySeconds}:${myMilliSeconds}`
+        )
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

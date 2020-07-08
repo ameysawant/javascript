@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array some and every</title>
+</head>
+
+<body>
+    <!-- 
+        some() method checks if any of the elements in an array pass a test (provided as a function)
+
+        every() method checks if all elements in an array pass a test (provided as a function)
+     -->
+
+    <script>
+        const a = [10, 200, 241, 32, 456, 21, 2, 1, 500];
+
+        const checkValue = function (value, index, array) {
+            console.log(value);
+            return value;
+        }
+        let b = a.every(checkValue);
+        console.log(b);
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

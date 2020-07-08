@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>object literal</title>
+</head>
+
+<body>
+
+    
+
+    <script>
+        //object literal
+
+        const ameyDetails = {
+            name: 'amey',
+            age: 35,
+            salary: 50000,
+            addres: 'singapore',
+            hobbies: ['cricket','music','dancing'],
+            otherAddress: {
+                add1: 'bandra',
+                add2: 'juhu',
+                add3: 'santacruz'
+            },
+            myDailyRoutine: function(){
+                return this.name + ' ' + this.age + ' ' + this.salary + ' ' + this.addres;
+            }
+        };
+
+        document.write(ameyDetails.myDailyRoutine());
+        console.log(ameyDetails);
+        
+
+        
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

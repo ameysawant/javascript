@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>types of function</title>
+</head>
+
+<body>
+
+    <!-- 
+    -function declaration
+    -function expression
+    -anonymous function
+    -self invoked function
+    -arrow function
+-->
+    <script>
+
+        let name = 'Amey';
+        let surname = 'sawant';
+        let age = 35;
+        let phone = 4544545454;
+        // function declaration
+        // function ameyDetails() {
+        //     document.write(name);
+        //     document.write(surname);
+        //     document.write(age);
+        //     document.write(phone + '<br>');
+        // }
+        //function expression
+        // let ameyDetails = function ameyDetails() {
+        //     document.write(name);
+        //     document.write(surname);
+        //     document.write(age);
+        //     document.write(phone + '<br>');
+        // }
+        //anonymous function
+        // let ameyDetails = function () {
+        //     document.write(name);
+        //     document.write(surname);
+        //     document.write(age);
+        //     document.write(phone + '<br>');
+        // }
+        //self invoked function
+        // (function () {
+        //     document.write(name);
+        //     document.write(surname);
+        //     document.write(age);
+        //     document.write(phone + '<br>');
+        // })();
+        // arrow function
+        let ameyDetails = () => {
+            document.write(name);
+            document.write(surname);
+            document.write(age);
+            document.write(phone + '<br>');
+        }
+        ameyDetails();
+
+    </script>
+
+
+
+</body>
+
+</html>

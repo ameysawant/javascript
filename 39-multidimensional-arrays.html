@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>multidimensional arrays</title>
+</head>
+
+<body>
+
+    <script>
+
+        let employees = [
+//               0     1       
+        /*0*/['Amey', 35],
+        /*1*/['Gajanan', 'PHP Developer'],
+        /*2*/['Mahesh', 65],
+        /*3*/['Aniket', 'UI UX Designer']
+        ];
+//                     4 < 4                 4
+        for(let a = 0; a < employees.length; a++){
+            //             2 < 2         3          2
+            for(let b = 0; b < employees[a].length; b++){
+                document.write(employees[a][b]);// 3 1 Aniket UI UX Designer
+            }
+            document.write('<br>')
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

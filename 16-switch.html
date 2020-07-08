@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>switch</title>
+</head>
+
+<body>
+    <!-- switch
+        The value of the expression is compared with the values of each case.
+        If there is a match, the associated block of code is executed.
+        If there is no match, the default code block is executed.    
+    -->
+
+
+    <script>
+        let per = 90;
+        switch(true){
+
+            case per >= 1 && per < 35 : document.write('fail');
+            break;
+
+            case per >= 35 && per < 60 : document.write('average');
+            break;
+
+            case per >= 60 && per < 100 : document.write('merit');
+            break;
+
+            default: document.write('invalid');
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

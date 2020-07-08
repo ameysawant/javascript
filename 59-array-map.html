@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array map</title>
+</head>
+
+<body>
+    <script>
+        const originalArray = [
+            { name: 'amey', age: 35, salary: 50000, bike: 'yamaha', day: 05, month: 1, year: 1992 },
+
+            { name: 'aniket', age: 15, salary: 120000, bike: 'bajaj', day: 09, month: 12, year: 1990 },
+
+            { name: 'mahesh', age: 25, salary: 450000, bike: 'suzuki', day: 12, month: 6, year: 1984 },
+
+            { name: 'amol', age: 5, salary: 200, bike: 'cycle', day: 30, month: 3, year: 2002 },
+
+            { name: 'gajanan', age: 47, salary: 1520000, bike: 'bmw', day: 01, month: 9, year: 1975 },
+
+            { name: 'jaywant', age: 17, salary: 20000, bike: 'luna', day: 22, month: 1, year: 1989 }
+        ];
+
+        console.log(originalArray);
+
+        let myNewArray = originalArray.map(function(item){
+            return item.salary + 5000;
+        });
+        console.log(myNewArray);
+        
+        
+
+    </script>
+
+
+
+</body>
+
+</html>

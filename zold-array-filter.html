@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array filter</title>
+</head>
+
+<body>
+
+    <script>
+        let a = ['amey', 'gajanan', 18, 'mahesh', 'gajanan', 45, 456, 888];
+
+        let checkValue = item => {
+            return item > 100;
+        }
+
+        let b = a.filter(checkValue);
+        document.write(b)
+        console.log(a);
+        
+
+    </script>
+
+
+
+</body>
+
+</html>

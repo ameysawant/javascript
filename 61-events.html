@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript events</title>
+</head>
+
+<body>
+
+    <header>
+        <h1 onclick="changeText()">This is javascript event tutorial.</h1>
+        <p oncontextmenu="alert('you cannot rightclick');">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam totam quaerat soluta labore debitis
+            voluptatibus esse aliquid earum minima ipsum? Placeat accusantium eum, iusto dicta sit molestias
+            reprehenderit architecto voluptate.
+        </p>
+        <input id="inputId" type="text" placeholder="age 18+">
+        <button onmouseover="checkAge()">Check</button>
+        <p id="demotext"></p>
+    </header>
+
+    <script>
+        // const changeText = function (){
+        //     document.querySelector('h1').innerHTML = 'This is Kishori Tutorials.';
+        // }
+
+        const checkAge = () => {
+            let getAge = document.getElementById('inputId').value;
+            
+            if(getAge === ""){
+                document.getElementById('demotext').innerHTML = 'your field cannot be blank';
+            }else if(getAge >= 18){
+                document.getElementById('demotext').innerHTML = 'ok you can enter';
+            }else{
+                document.getElementById('demotext').innerHTML = 'you cannot enter';
+            }            
+        }
+        
+    </script>
+
+
+
+</body>
+
+</html>

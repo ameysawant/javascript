@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title> from validation </title>
+    <style>
+        #pra {
+            color: red;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 600px;
+        }
+
+        input,
+        textarea,
+        select {
+            padding: 15px;
+            border: 1px solid #ddd;
+            background: #eee;
+            margin-bottom: 15px;
+        }
+
+        .fc {
+            width: 100%;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #333;
+            color: #fff;
+            border: none;
+        }
+
+        .float {
+            float: left;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- <form action="">
+        <input type="text" placeholder="first-name *" id="demo-1" required>
+        <input type="text" placeholder="last-name *" id="demo-2" required>
+        <input type="email" placeholder="E-mail *" id="demo-3" required>
+        <input type="number" placeholder="contact *" id="demo-4" required>
+        <textarea style="resize:none;" rows="5" cols="30" id="demo-5" placeholder="Message *" required></textarea>
+        <button> click here </button>
+    </form> -->
+
+    <form action="" name="form">
+        <p id="pra"></p>
+        <div class="float">
+            <input name="firstName" class="fc" class="fc" type="text" placeholder="first-name *" id="fName">
+        </div>
+        <div class="float">
+            <input name="lastName" class="fc" type="text" placeholder="last-name *" id="lName">
+        </div>
+        <div class="float">
+            <input name="emailId" class="fc" type="text" placeholder="E-mail *" id="email">
+        </div>
+        <div class="float">
+            <input name="contactNumber" class="fc" type="text" placeholder="contact *" id="contact">
+        </div>
+        <div class="float">
+            <textarea name="messageBox" class="fc" style="resize:none;" rows="5" cols="30" id="message"
+                placeholder="Message *"></textarea>
+        </div>
+        <div class="float">
+            <label><input name="chkbox" type="checkbox">Check 1</label>
+            <label><input name="chkbox" type="checkbox">Check 2</label>
+            <label><input name="chkbox" type="checkbox">Other</label>
+        </div>
+        <div class="float">
+            <input name="password" class="fc" type="password" placeholder="password*" id="password">
+        </div>
+        <div class="float">
+            <select class="fc" name="selectBox" id="selectBox">
+                <option value="">Select</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+        </div>
+
+        <div class="float">
+            <label><input name="radio" type="radio" value="Male">Male</label>
+            <label><input name="radio" type="radio" value="Female">Female</label>
+            <label><input name="radio" type="radio" value="Other">Other</label>
+        </div>
+        <div class="float">
+            <input name="date" class="fc" type="date" id="date" value="">
+        </div>
+        <div class="float">
+            <input name="file" class="fc" type="file" id="file" value="">
+        </div>
+        <div class="float">
+            <input name="url" class="fc" type="url" placeholder="url" id="url" value="">
+        </div>
+
+        <div class="float">
+            <button onclick="return myValidation()"> click here </button>
+        </div>
+    </form>
+
+    <script>
+
+        function myValidation() {
+
+            let firstName = document.getElementById('fName').value;
+            let lastName = document.getElementById('lName').value;
+            let email = document.getElementById('email').value;
+            let contact = document.getElementById('contact').value;
+            let message = document.getElementById('message').value;
+            let onlyLetters = /^[a-zA-Z]*$/; // only characters and not numbers and not symbols
+            let onlyEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; // email validation regex pattern
+            let numberOnly = /^\d+$/; // numbers only
+            // let cbox = document.forms["form"]["chkbox"];
+            let cbox = document.getElementsByName('chkbox');
+            let cboxValue = false;
+            for (let a = 0; a < cbox.length; a++) {
+                if (cbox[a].checked == true) {
+                    cboxValue = true;
+                }
+            }
+            let password = document.getElementById('password').value;
+            let pLength = password.length;
+            let selectBox = document.getElementById('selectBox').value;
+            let radioBtn = document.getElementsByName('radio');
+            let radioValue = false;
+            // console.log(radioBtn);
+            for (let i = 0; i < radioBtn.length; i++) {
+                if (radioBtn[i].checked == true) {
+                    radioValue = true;
+                }
+            }
+            let date = document.getElementById('date').value;
+            let file = document.getElementById('file').value;
+            let url = document.getElementById('url').value;
+            let urlRegex = /^(https?:\/\/(www\.)|(www\.))?\w+(\.\w{2,4})\/?$/;
+
+            if (firstName == "") {
+                document.getElementById('pra').innerHTML = 'First Name is required';
+                return false;
+            }
+            else if (!onlyLetters.test(firstName)) {
+                document.getElementById('pra').innerHTML = 'First Name should be only letters';
+                return false;
+            }
+            else if (lastName == "") {
+                document.getElementById('pra').innerHTML = 'Last Name is required*';
+                return false;
+            }
+            else if (!onlyLetters.test(lastName)) {
+                document.getElementById('pra').innerHTML = 'Last Name should be only letters';
+                return false;
+            }
+            else if (email == "") {
+                document.getElementById('pra').innerHTML = 'Email is required*';
+                return false;
+            }
+            else if (!onlyEmail.test(email)) {
+                document.getElementById('pra').innerHTML = 'Email is not valid';
+                return false;
+            }
+            else if (contact == "") {
+                document.getElementById('pra').innerHTML = 'Contact is required*';
+                return false;
+            }
+            else if (!numberOnly.test(contact)) {
+                document.getElementById('pra').innerHTML = 'Numbers only please';
+                return false;
+            }
+            else if (message == "") {
+                document.getElementById('pra').innerHTML = 'Message is required*';
+                return false;
+            }
+            else if (!cboxValue == true) {
+                document.getElementById('pra').innerHTML = 'Select one checkbox*';
+                return false;
+            }
+            else if (password == "") {
+                document.getElementById('pra').innerHTML = 'Password is required*';
+                return false;
+            }
+            else if (pLength < 6) {
+                document.getElementById('pra').innerHTML = 'Password length should be between 6 to 12 characteres*';
+                return false;
+            }
+            else if (pLength > 12) {
+                document.getElementById('pra').innerHTML = 'Password length should be between 6 to 12 characteres*';
+                return false;
+            }
+            else if (selectBox == "") {
+                document.getElementById('pra').innerHTML = 'Select one from the list*';
+                return false;
+            }
+            else if (!radioValue == true) {
+                document.getElementById('pra').innerHTML = 'Select one gender*';
+                return false;
+            }
+            else if (date == "") {
+                document.getElementById('pra').innerHTML = 'Select date please*';
+                return false;
+            }
+            else if (file == "") {
+                document.getElementById('pra').innerHTML = 'Upload image please*';
+                return false;
+            }
+            else if (url == "") {
+                document.getElementById('pra').innerHTML = 'Type url please*';
+                return false;
+            }
+            else if (!urlRegex.test(url)) {
+                document.getElementById('pra').innerHTML = 'Type as shown here... http://google.com OR www.google.com OR google.com*';
+                return false;
+            }
+            else {
+                document.getElementById('pra').innerHTML = 'Successfully Submitted';
+                return false;
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

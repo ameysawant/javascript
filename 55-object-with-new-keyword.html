@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>object with new keyword</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        //object with new keyword
+
+        const ameyDetails = new Object();
+
+        ameyDetails.name = 'amey';
+        ameyDetails.age = 35;
+        ameyDetails.salary = 50000;
+        ameyDetails.address = 'singapore';
+        ameyDetails.hobbies = ['cricket', 'music', 'dancing'];
+        ameyDetails.otherAddress = {
+            add1: 'bandra',
+            add2: 'juhu',
+            add3: 'santacruz'
+        };
+        ameyDetails.myDailyRoutine = function(){
+            return this.name + ' ' + this.age + ' ' + this.salary + ' ' + this.address;
+        }
+
+
+        console.log(ameyDetails.myDailyRoutine());
+
+
+        // const ameyDetails = {
+        //     name: 'amey',
+        //     age: 35,
+        //     salary: 50000,
+        //     addres: 'singapore',
+        //     hobbies: ['cricket','music','dancing'],
+        //     otherAddress: {
+        //         add1: 'bandra',
+        //         add2: 'juhu',
+        //         add3: 'santacruz'
+        //     },
+        //     myDailyRoutine: function(){
+        //         return this.name + ' ' + this.age + ' ' + this.salary + ' ' + this.addres;
+        //     }
+        // };
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

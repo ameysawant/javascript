@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>prompt</title>
+</head>
+
+<body>
+
+
+    <script>
+        let per = prompt('add your percentage');
+        switch(true){
+
+            case per >= 1 && per < 35 : document.write('fail');
+            break;
+
+            case per >= 35 && per < 60 : document.write('average');
+            break;
+
+            case per >= 60 && per < 100 : document.write('merit');
+            break;
+
+            default: document.write('invalid');
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

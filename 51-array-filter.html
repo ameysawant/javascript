@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array filter</title>
+</head>
+
+<body>
+
+    <script>
+        let a = ['aniket','mahesh','gajanan','aniket'];
+
+        let myFunction = function (value, index, array) {
+            return array.indexOf(value) == index; //0 == 3 false 
+//                                              [aniket, mahesh, gajanan]
+        };
+        let b = a.filter(myFunction);
+
+        console.log(a);
+        console.log(b);
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

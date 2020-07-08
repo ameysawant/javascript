@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>else if</title>
+</head>
+
+<body>
+    <!-- else if
+
+        Use 'if' to specify a block of code to be executed, if a specified condition is true
+        Use 'else' to specify a block of code to be executed, if the same condition is false
+        Use 'else' if to specify a new condition to test, if the first condition is false
+        Use 'switch' to specify many alternative blocks of code to be executed     
+    -->
+
+
+    <script>
+        let outOf = 750;
+        let totalMarks = 540;
+        let percentage = totalMarks * 100 / outOf;
+        percentage.toFixed();
+        console.log(percentage);
+
+        if(percentage >= 1 && percentage < 35){
+            document.write('you are fail. <br>' + percentage + '%');
+        }
+        else if(percentage >= 35 && percentage < 60){
+            document.write('you are average. <br>' + percentage + '%');
+        }
+        else if(percentage >= 60 && percentage < 70){
+            document.write('you got distinction. <br>' + percentage + '%');
+        }
+        else if(percentage >= 70 && percentage < 100){
+            document.write('you got merit. <br>' + percentage + '%');
+        }
+        else{
+            document.write('you are poor. <br>' + percentage + '%');
+        }
+        
+
+
+    </script>
+
+
+
+</body>
+
+</html>

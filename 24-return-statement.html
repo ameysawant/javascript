@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>return statement</title>
+</head>
+
+<body>
+
+<script>
+    let outOf = 750; eng = 35, his = 45, geo = 98, maths = 75, sci = 63, mar = 45, eco = 77;
+
+    let allSubjects = function (eng1, his1, geo1, maths1, sci1, mar1, eco1) {
+        let myTotalMarks = eng1 + his1 + geo1 + maths1 + sci1 + mar1 + eco1;
+        console.log(myTotalMarks);//438
+        return myTotalMarks;//438
+    }
+    let total = allSubjects(eng, his, geo, maths, sci, mar, eco);    
+
+
+    let calculate = function(total2){//438
+        let per = total2 * 100 / outOf;
+        return per;
+        // document.write(per + '%');
+    }
+    let percentage = calculate(total);//438
+    document.write(percentage + '%');
+
+    let abc = function(percentage){
+        document.write(percentage);
+    }
+    abc(percentage);
+</script>
+
+
+
+</body>
+
+</html>

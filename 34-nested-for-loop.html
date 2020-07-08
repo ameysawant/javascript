@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nested for loop</title>
+</head>
+
+<body>
+
+    <script>
+        //             4 <= 3  4
+        for(let a = 1; a <= 3; a++){
+            document.write('<b>outerloop</b> ' + a + '<br>');//3
+            //             3 < 3  3
+            for(let b = 0; b < 3; b++){
+                document.write('innerloop ' + b + '<br>');//2
+            }
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

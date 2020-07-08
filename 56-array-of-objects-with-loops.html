@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array of objects with loops</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        const myarray = [
+            {
+                name: 'amey',
+                age: 35,
+                salary: 50000,
+                addres: 'singapore',
+                hobbies: ['cricket', 'music', 'dancing'],
+                otherAddress: {
+                    add1: 'bandra',
+                    add2: 'juhu',
+                    add3: 'santacruz'
+                }
+            },
+            {
+                name: 'aniket',
+                age: 29,
+                salary: 70000,
+                addres: 'mumbai',
+                hobbies: ['carrom', 'basketball', 'shopping'],
+                otherAddress: {
+                    add1: 'fort',
+                    add2: 'marinelines',
+                    add3: 'mahim'
+                }
+            },
+            {
+                name: 'mahesh',
+                age: 23,
+                salary: 40000,
+                addres: 'canada',
+                hobbies: ['pubg', 'pool', 'football'],
+                otherAddress: {
+                    add1: 'lonavla',
+                    add2: 'kolad',
+                    add3: 'tungareshwar'
+                }
+            }
+        ];
+
+        console.log(myarray);
+
+        const checkvalue = function (item) {
+            return item.otherAddress.add2 === 'marinelines';
+        }
+        let show = myarray.find(checkvalue);
+
+        console.log(show.hobbies);
+
+
+        // let myNewArr = [];
+        // //             3 < 3               3
+        // for(let a = 0; a < myarray.length; a++){
+        //     console.log(myarray[a]); //2
+        //     myNewArr.push(myarray[a]);
+        // }
+        // console.log(myNewArr[1].hobbies);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

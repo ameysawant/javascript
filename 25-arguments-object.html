@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arguments object</title>
+</head>
+
+<body>
+    <!-- 
+-the javascript arguments object is a local variable available within function.
+-arguments object is available only inside function body.
+-if you try to access arguments outside the function you will get undefined error.
+-you can index the arguments object like an array but it is not an array.
+-it does not have any array property except .length
+ -->
+
+    <script>
+        let myFunction = function () {
+            document.write(arguments[0])
+        }
+        myFunction();
+    </script>
+
+
+
+</body>
+
+</html>

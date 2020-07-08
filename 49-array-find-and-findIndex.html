@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>array find and findIndex</title>
+</head>
+
+<body>
+<!-- The find() method returns the value of the first element in an array that pass a test (provided as a function).
+
+execute a function for each element in an array
+-->
+    <script>
+        let a = ['amey', 'gajanan', 18, 'mahesh', 'gajanan', 888];
+
+        let b = a.findIndex(function(item){
+            return item === 'Mahesh';
+        })
+        
+        console.log(b);
+        
+        
+
+    </script>
+
+
+
+</body>
+
+</html>
