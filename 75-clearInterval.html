@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>clearInterval</title>
+</head>
+
+<body>
+    <h3 id="demo"></h3>
+    <button onclick="starts()">start</button>
+    <button onclick="stops()">stop</button>
+    <script>
+
+        const starts = () => {
+            const startClock = function () {
+                let date = new Date();
+                let showClock = date.toLocaleTimeString();
+                document.getElementById('demo').innerHTML = showClock;
+            }
+            x = setInterval(startClock, 1000);
+        }
+
+        const stops = () =>{
+            clearInterval(x);
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
