@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+    <title>Find DOM Elements</title>
+</head>
+
+<body>
+
+
+    <header id="header" class="headersection text-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Kishori Tutorials</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
+                        dicta,
+                        deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero. Qui cum
+                        aspernatur
+                        eos.</p>
+                    <a href="" class="btn btn-info">read more</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="articles" class="articlessection mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <h1>Article 1</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
+                        dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero.
+                        Qui cum aspernatur eos.</p>
+                    <a href="" class="btn btn-info">read more</a>
+                </div>
+                <div class="col-4">
+                    <h1>Article 2</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
+                        dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero.
+                        Qui cum aspernatur eos.</p>
+                    <a href="" class="btn btn-info">read more</a>
+                </div>
+                <div class="col-4">
+                    <h1>Article 3</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
+                        dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero.
+                        Qui cum aspernatur eos.</p>
+                    <a href="" class="btn btn-info">read more3</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="flower" class="flowersection mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forms" class="formssection mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <form action="">
+                        <input type="text" class="form-control mb-3" placeholder="testing1">
+                        <input type="text" class="form-control mb-3" placeholder="testing1">
+                        <input type="text" class="form-control mb-3" placeholder="testing1">
+                        <input type="text" class="form-control mb-3" placeholder="testing1">
+                    </form>
+                </div>
+                <div class="col-4">
+                    <form action="">
+                        <input type="text" class="form-control mb-3" placeholder="testing2">
+                        <input type="text" class="form-control mb-3" placeholder="testing2">
+                        <input type="text" class="form-control mb-3" placeholder="testing2">
+                        <input type="text" class="form-control mb-3" placeholder="testing2">
+                    </form>
+                </div>
+                <div class="col-4">
+                    <form action="">
+                        <input type="text" class="form-control mb-3" placeholder="testing3">
+                        <input type="text" class="form-control mb-3" placeholder="testing3">
+                        <input type="text" class="form-control mb-3" placeholder="testing3">
+                        <input type="text" class="form-control mb-3" placeholder="testing3">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Finding HTML Elements    
+    Finding HTML elements by id
+    Finding HTML elements by tag name
+    Finding HTML elements by class name
+    Finding HTML elements by CSS selectors
+    p   p.example   .example   a[target]   div > p   h2, div, span  #demo
+
+    Finding HTML elements by HTML object collections 
+        all head title body images forms links doctype URL basurl domain
+
+-->
+
+    <script>
+                
+        let header = document.getElementById('header');
+        console.log(header);
+
+        let articles = document.getElementById('articles');
+        console.log(articles);
+
+        let flower = document.getElementById('flower');
+        console.log(flower);
+
+        let forms = document.getElementById('forms');
+        console.log(forms);
+        
+        
+        
+        
+
+        
+    </script>
+
+</body>
+
+</html>
