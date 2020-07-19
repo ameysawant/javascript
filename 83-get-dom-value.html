@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-    <title>getElementByTagName</title>
+    <title>get value</title>
 </head>
 
 <body>
@@ -15,14 +15,14 @@
     <header id="header" class="headersection text-center py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div>
                     <h1>Kishori Tutorials</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
                         dicta,
                         deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero. Qui cum
                         aspernatur
                         eos.</p>
-                    <a href="" class="btn btn-info">read more</a>
+                    <a href="www.google.com" class="btn btn-info">read more first</a>
                 </div>
             </div>
         </div>
@@ -36,21 +36,21 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
                         dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero.
                         Qui cum aspernatur eos.</p>
-                    <a href="" class="btn btn-info">read more</a>
+                    <a href="www.youtube.com" target="_blank" class="btn btn-info">read more</a>
                 </div>
                 <div class="col-4">
                     <h1>Article 2</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
                         dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero.
                         Qui cum aspernatur eos.</p>
-                    <a href="" class="btn btn-info">read more</a>
+                    <a href="www.facebook.com" class="btn btn-info">read more</a>
                 </div>
                 <div class="col-4">
                     <h1>Article 3</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
                         dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero.
                         Qui cum aspernatur eos.</p>
-                    <a href="" class="btn btn-info">read more3</a>
+                    <a href="www.shine.com" class="btn btn-info">read more3</a>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-4">
-                    <form action="">
+                    <form id="form1" action="">
                         <input type="text" class="form-control mb-3" placeholder="testing1">
                         <input type="text" class="form-control mb-3" placeholder="testing1">
                         <input type="text" class="form-control mb-3" placeholder="testing1">
@@ -90,7 +90,7 @@
                     </form>
                 </div>
                 <div class="col-4">
-                    <form action="">
+                    <form id="form2" action="">
                         <input type="text" class="form-control mb-3" placeholder="testing2">
                         <input type="text" class="form-control mb-3" placeholder="testing2">
                         <input type="text" class="form-control mb-3" placeholder="testing2">
@@ -98,7 +98,7 @@
                     </form>
                 </div>
                 <div class="col-4">
-                    <form action="">
+                    <form id="form3" action="">
                         <input type="text" class="form-control mb-3" placeholder="testing3">
                         <input type="text" class="form-control mb-3" placeholder="testing3">
                         <input type="text" class="form-control mb-3" placeholder="testing3">
@@ -111,28 +111,25 @@
 
 
 
-    <!-- Finding HTML Elements    
-    Finding HTML elements by id
-    Finding HTML elements by tag name
-    Finding HTML elements by class name
-    Finding HTML elements by CSS selectors
-    p   p.example   .example   a[target]   div > p   h2, div, span  #demo
-
-    Finding HTML elements by HTML object collections 
-        all head title body images forms links doctype URL basurl domain
-
--->
+    <!-- 
+        innerHTML
+        innerText
+        getAttribute
+        getAttributeNode
+        attributes
+        .value
+        .name
+    -->
 
     <script>
-        let header = document.getElementById('header');
-        let show = header.getElementsByTagName('p')[0];
-        console.log(show);
-        
-        
+        let header = 
+        document.querySelectorAll('#articles a')[0].attributes['class'].value;
+        console.log(header);
         
         
 
-        
+
+
 
 
 
