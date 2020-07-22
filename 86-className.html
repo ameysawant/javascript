@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
-    <title>get value</title>
+    <title>className</title>
 </head>
 
 <body>
-
-
     <header id="header" class="headersection text-center py-5">
         <div class="container">
             <div class="row">
                 <div>
-                    <h1>Kishori Tutorials</h1>
+                    <div>
+                        <h1>Kishori Tutorials</h1>
+                    </div>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
                         dicta,
                         deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero. Qui cum
@@ -110,54 +110,16 @@
     </section>
 
 
-
-    <!-- 
-        innerHTML
-        innerText
-        getAttribute
-        getAttributeNode
-        attributes
-        .value
-        .name
-    -->
-
     <script>
-        let header =
-            document.querySelectorAll('#articles a')[0].attributes['class'].value;
-        console.log(header);
-
-        // class Laptop {
-        //     constructor(ram,hdd,model,price) {
-        //         this.ram = ram;
-        //         this.hdd = hdd;
-        //         this.model = model;
-        //         this.price = price;
-        //     }
-        //     show() {
-        //         return this.ram + this.hdd + this.model + this.price;
-        //     }
-        // }
-
-        // const hp = new Laptop('4gb','1tb','hp15s','38000');
-        // console.log(hp);
-
-
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
+        let h = document.querySelectorAll('#articles .col-4');
+        // let a = h.className = 'headersection text-center py-5 bg-danger';
+        // console.log(a);
+        // console.log(h);
+        h.forEach(function(data){
+            console.log(data);
+            data.style.padding = '30px';
+            data.className = 'col-4 bg-warning';
+        })
     </script>
 
 </body>
