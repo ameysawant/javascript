@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+
+    <title>focus and blur</title>
+</head>
+
+<body>
+
+    <section id="forms" class="formssection mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <form id="form1" action="">
+                        <input type="text" class="form-control mb-3" placeholder="Name">
+                        <input type="text" class="form-control mb-3" placeholder="Email">
+                        <input type="text" class="form-control mb-3" placeholder="Mobile">
+                        <input type="text" class="form-control mb-3" placeholder="Message">
+                        <button class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const input = document.querySelectorAll('#forms input');
+        console.log(input);
+
+        input.forEach(data => {
+            data.addEventListener('focus', () => {
+                data.style.backgroundColor = 'red';
+            })
+
+            data.addEventListener('blur', () => {
+                data.style.backgroundColor = '';
+            })
+        })
+
+        // input.addEventListener('focus', () => {
+        //     input.style.backgroundColor = 'red';
+        // })
+
+        // input.addEventListener('blur', () => {
+        //     input.style.backgroundColor = '';
+        // })
+
+    </script>
+
+</body>
+
+</html>

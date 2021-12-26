@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <title>parentElement and parentNode</title>
+</head>
+
+<body>
+    <header id="header" class="headersection text-center py-5">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div>
+                        <h1>Kishori Tutorials</h1>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
+                        dicta,
+                        deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae vero. Qui cum
+                        aspernatur
+                        eos.</p>
+                    <a class="btn btn-info">read more first</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="articles" class="articlessection mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="bg">
+                        <h1>Article 1</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
+                            dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae
+                            vero.
+                            Qui cum aspernatur eos.</p>
+                        <a data-toggle="modal" data-target="#myModal" href="www.youtube.com" target="_blank"
+                            class="btn btn-info">read more</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="bg">
+                        <h1>Article 2</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
+                            dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae
+                            vero.
+                            Qui cum aspernatur eos.</p>
+                        <a data-toggle="modal" data-target="#myModal" href="www.facebook.com" class="btn btn-info">read
+                            more</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="bg">
+                        <h1>Article 3</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error maiores assumenda quo odio ab,
+                            dicta, deleniti, atque suscipit eius adipisci nam. Necessitatibus optio fuga repudiandae
+                            vero.
+                            Qui cum aspernatur eos.</p>
+                        <a data-toggle="modal" data-target="#myModal" href="www.shine.com" class="btn btn-info">read
+                            more3</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="flower" class="flowersection mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-2">
+                    <img src="images/flower.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="forms" class="formssection mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <form id="form1" action="">
+                        <input type="text" class="form-control bg-warning mb-3" placeholder="testing1">
+                        <input type="text" class="form-control mb-3" placeholder="testing1">
+                        <input type="text" class="form-control mb-3" placeholder="testing1">
+                        <input type="text" class="form-control mb-3" placeholder="testing1">
+                    </form>
+                </div>
+                <div class="col-4">
+                    <form id="form2" action="">
+                        <input type="text" class="form-control mb-3" placeholder="testing2">
+                        <input type="text" class="form-control mb-3" placeholder="testing2">
+                        <input type="text" class="form-control mb-3" placeholder="testing2">
+                        <input type="text" class="form-control mb-3" placeholder="testing2">
+                    </form>
+                </div>
+                <div class="col-4">
+                    <form id="form3" action="">
+                        <input type="text" class="form-control mb-3" placeholder="testing3">
+                        <input type="text" class="form-control mb-3" placeholder="testing3">
+                        <input type="text" class="form-control mb-3" placeholder="testing3">
+                        <input type="text" class="form-control mb-3" placeholder="testing3">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+    //   let h1 = document.querySelector('#articles h1');
+    //   let getParent = h1.parentElement.style.backgroundColor = 'orange';
+    //   console.log(getParent);
+
+      let h1 = document.querySelector('html');
+      let getParent = h1.parentElement;
+      console.log(getParent);
+    </script>
+
+</body>
+
+</html>

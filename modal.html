@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 10;
+            padding: 80px 15px 0 15px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal .modal-content {
+            background-color: #fefefe;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        /* .modal .close {color: var(--quaternary-color); background: var(--primary-color); font-size: 20px; font-weight: bold; position: absolute; right: 5px; top: 5px; padding:0; cursor: pointer; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; line-height: 0; width:20px; height:20px;} */
+        .modal .close {
+            /* color: var(--quaternary-color); */
+            /* background: var(--primary-color); */
+            font-size: 20px;
+            /* font-weight: bold; */
+            position: absolute;
+            right: 5px;
+            top: 1px;
+            padding: 0;
+            cursor: pointer;
+            /* border-radius: 50%; */
+            /* -moz-border-radius: 50%; */
+            /* -webkit-border-radius: 50%; */
+            /* line-height: 0; */
+            /* width: 20px; */
+            /* height: 20px;*/
+        }
+
+        /* .modal .close:hover, */
+        /* .modal .close:focus {color: var(--quaternary-color); text-decoration: none; cursor: pointer;} */
+        .modal .modal-center {
+            /*position: absolute !important;*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* .dvBottles{background-color: #f4f4f4;} */
+        .dvBottles .bottle {
+            text-align: center;
+            position: relative;
+        }
+
+        .dvBottles .bottle img{width: 300px;}
+
+        /* .dvBottles .bottle img{max-width:450px; width: 100%;} */
+        .dvBottles .bottle .btn {
+            position: absolute;
+            z-index: 5;
+            background: rgba(236, 203, 36, 0.5);
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius-: 50%;
+            border: 1px solid #000;
+        }
+
+        .dvBottles .bottle .btn1 {
+            top: 16%;
+            left: 47%;
+        }
+
+        .dvBottles .bottle .btn2 {
+            top: 36%;
+            left: 59%;
+        }
+
+        .dvBottles .bottle .btn3 {
+            top: 60%;
+            left: 33%;
+        }
+
+        .dvBottles .bottle .btn4 {
+            top: 72%;
+            left: 52%;
+        }
+
+        .dvBottles h4 {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .dvBottles .text p {
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 15px auto 30px auto;
+        }
+
+        #dvBottlesModal .modal-content h4 {
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        #dvBottlesModal .modal-content {
+            padding: 50px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dvBottles">
+        <div class="bottle">
+            <button class="btn btn1">1</button>
+            <button class="btn btn2">2</button>
+            <button class="btn btn3">3</button>
+            <button class="btn btn4">4</button>
+            <img src="images/bottle-mobile.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="text col-12 text-center">
+                    <h4>All Fresh. No Preservatives.</h4>
+                    <p>
+                        Caps<br> Juice Inside<br> Sedimentation<br> Plastic BPA
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dvModal">
+        <div id="dvBottlesModal" class="modal" style="display:none;">
+            <div class="modal-content modal-center text-center">
+                <span class="btn close">X</span>
+                <div class="text">
+                    <!-- <h4>Juice Inside</h4>
+                    <p class="text"></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let btn1 = document.querySelector('.btn1');
+        let getButtons = document.querySelectorAll('.dvBottles .bottle .btn');
+        let modal = document.querySelector('#dvBottlesModal');
+        let closeBtn = document.querySelector('.modal .close');
+        let body = document.querySelector('body');
+        let text = document.querySelector('#dvBottlesModal .modal-content .text');
+        let txtArray = {
+            text1: `<h4>Caps</h4>
+            <p>All safe. No Leaks. Little leaks in caps can cause oxidation &amp; spoilage. Our new airtight caps protect the liquid inside from oxidation, leakag-es and contact with other external elements like air, water or dust.</p>`,
+            text2: `
+            <h4>Juice Inside</h4>
+            <p>All Fresh. No Preservatives. We use cutting-edge High-Pressure Sterilization Processes to keep our
+                    juices preservatives free. This advanced scientific process enables us to naturally preserve the
+                    juices without adding any preservative or through any secret formula.</p>`,
+            text3: `<h4>Juice Inside3</h4>
+            <p>All Fresh. No Preservatives. We use cutting-edge High-Pressure Sterilization Processes to keep our
+                    juices preservatives free. This advanced scientific process enables us to naturally preserve the
+                    juices without adding any preservative or through any secret formula.</p>`,
+            text4: `<h4>Juice Inside4</h4>
+            <p>All Fresh. No Preservatives. We use cutting-edge High-Pressure Sterilization Processes to keep our
+                    juices preservatives free. This advanced scientific process enables us to naturally preserve the
+                    juices without adding any preservative or through any secret formula.</p>`,
+            text5: 'not found'
+        }
+        Array.from(getButtons).forEach(function (buttons) {
+            buttons.addEventListener('click', function () {
+                modal.style.display = 'block';
+                let getAttr = buttons.getAttribute('class');
+                if (getAttr == 'btn btn1') {
+                    text.innerHTML = txtArray.text1;
+                }
+                else if (getAttr == 'btn btn2') {
+                    text.innerHTML = txtArray.text2;
+                }
+                else if (getAttr == 'btn btn3') {
+                    text.innerHTML = txtArray.text3;
+                }
+                else if (getAttr == 'btn btn4') {
+                    text.innerHTML = txtArray.text4;
+                }
+                else {
+                    text.innerHTML = txtArray.text5;
+                }
+            });
+        });
+        closeBtn.onclick = function () {
+            modal.style.display = 'none';
+        }
+
+
+        // let btn1 = document.querySelector('.btn1');
+        // let modal = document.querySelector('#dvBottlesModal');
+        // let closeBtn = document.querySelector('#dvBottlesModal .close');
+        // let body = document.querySelector('body');
+        // const showModal = () => {
+        //     modal.style.display = 'block';
+        //     body.style.overflow = 'hidden';
+        // }
+        // const closeModal = () => {
+        //     modal.style.display = 'none';
+        //     body.style.overflow = 'auto';
+        // }
+        // btn1.addEventListener('click', showModal);
+        // closeBtn.addEventListener('click', closeModal);
+    </script>
+</body>
+
+</html>
